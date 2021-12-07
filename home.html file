@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+    	<form action = "http://localhost:5000/home", method = 'post'>
+    		Product Brand = <input type = 'text' name="brand" />
+    		<br><br>
+    		<input type = 'submit' value = 'submit'/>
+
+
+    	</form>
+    </body>
+</html>
