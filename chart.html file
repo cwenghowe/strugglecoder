@@ -1,0 +1,41 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">
+        </div>
+        <div class="col-md-6">
+            <div class="chart" id="line">
+                <script>
+                    var graphs = {{plotJSON_LINE | safe}};
+                    Plotly.plot('line',graphs,{});
+                </script>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="chart" id="piechart">
+                <script>
+                    var graphs = {{plotJSON_PIE | safe}};
+                    Plotly.plot('piechart',graphs,{});
+                </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/plot.js') }}"></script>
+        <div class="col-md-6">
+            <p style="text-align:center;"><image src="{{ url_for('static', filename='test.png') }}"></p>
+
+        </div>
+</body>
+</html>
